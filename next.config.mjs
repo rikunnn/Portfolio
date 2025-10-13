@@ -1,23 +1,27 @@
-// get env variable
-import dotenv from 'dotenv';
+import mdx from "@next/mdx";
 
-dotenv.config();
-
-const env = process.env.NODE_ENV || 'development';
+const withMDX = mdx({
+  extension: /\.mdx?$/,
+  options: {},
+});
 
 /** @type {import('next').NextConfig} */
-const nextConfigProd = {
-  output: 'export',
-  basePath: '/portfolio',
+const nextConfig = {
+  pageExtensions: ["ts", "tsx", "md", "mdx"],
+  transpilePackages: ["next-mdx-remote"],
   images: {
-    loader: 'custom',
-    loaderFile: './src/lib/image.loader.js',
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.google.com",
+        pathname: "**",
+      },
+    ],
+  },
+  sassOptions: {
+    compiler: "modern",
+    silenceDeprecations: ["legacy-js-api"],
   },
 };
 
-/** @type {import('next').NextConfig} */
-const nextConfigDev = {};
-
-const nextConfig = env === 'development' ? nextConfigDev : nextConfigProd;
-
-export default nextConfig;
+export default withMDX(nextConfig);

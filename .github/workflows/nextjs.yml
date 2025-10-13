@@ -1,4 +1,4 @@
-name: Deploy Next.js site to Pages
+https://github.com/Ensign-College/CS22-portfolio-template/blob/main/src/app/about/page.jsname: Deploy Next.js site to Pages
 
 on:
   # Runs on pushes targeting the default branch
