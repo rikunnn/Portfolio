@@ -207,6 +207,15 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
+  /** Aspirations and work style preferences section */
+  aspirations?: {
+    /** Whether to display aspirations section */
+    display: boolean;
+    /** Title for the aspirations section */
+    title: string;
+    /** Description of aspirations */
+    description: React.ReactNode;
+  };
 }
 
 /**

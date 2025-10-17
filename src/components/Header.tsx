@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, work, gallery } from "@/resources";
+import { routes, display, person, about } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -109,59 +109,78 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-              {routes["/work"] && (
+              {routes["/strengths"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      label={work.label}
-                      selected={pathname.startsWith("/work")}
+                      prefixIcon="star"
+                      href="/strengths"
+                      label="Strengths"
+                      selected={pathname === "/strengths"}
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      selected={pathname.startsWith("/work")}
+                      prefixIcon="star"
+                      href="/strengths"
+                      selected={pathname === "/strengths"}
                     />
                   </Row>
                 </>
               )}
-              {routes["/blog"] && (
+              {routes["/projects"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="book"
-                      href="/blog"
-                      label={blog.label}
-                      selected={pathname.startsWith("/blog")}
+                      prefixIcon="grid"
+                      href="/projects"
+                      label="Projects"
+                      selected={pathname === "/projects"}
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="book"
-                      href="/blog"
-                      selected={pathname.startsWith("/blog")}
+                      prefixIcon="grid"
+                      href="/projects"
+                      selected={pathname === "/projects"}
                     />
                   </Row>
                 </>
               )}
-              {routes["/gallery"] && (
+              {routes["/skills"] && (
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="gallery"
-                      href="/gallery"
-                      label={gallery.label}
-                      selected={pathname.startsWith("/gallery")}
+                      prefixIcon="code"
+                      href="/skills"
+                      label="Skills"
+                      selected={pathname === "/skills"}
                     />
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="gallery"
-                      href="/gallery"
-                      selected={pathname.startsWith("/gallery")}
+                      prefixIcon="code"
+                      href="/skills"
+                      selected={pathname === "/skills"}
+                    />
+                  </Row>
+                </>
+              )}
+              {routes["/aspirations"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="lightbulb"
+                      href="/aspirations"
+                      label="Aspirations"
+                      selected={pathname === "/aspirations"}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="lightbulb"
+                      href="/aspirations"
+                      selected={pathname === "/aspirations"}
                     />
                   </Row>
                 </>

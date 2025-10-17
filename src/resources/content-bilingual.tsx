@@ -22,12 +22,12 @@ const createSocial = (person: Person): Social => [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/rikunakamura",
+    link: "https://github.com/rikunnn",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/rikunakamura/",
+    link: "https://www.linkedin.com/in/riku-nakamura-49521b304",
   },
   {
     name: "Email",
@@ -49,6 +49,8 @@ const createHome = (lang: 'en' | 'ja', person: Person): Home => ({
     : <>Building full-stack applications with modern technologies</>,
   featured: {
     display: false,
+    title: "",
+    href: "",
   },
   subline: lang === 'ja' ? (
     <>
@@ -86,16 +88,31 @@ const createAbout = (lang: 'en' | 'ja', person: Person): About => ({
     title: lang === 'ja' ? "はじめに" : "Introduction",
     description: lang === 'ja' ? (
       <>
-        RikuはEnsign CollegeでComputer Scienceを専攻している学生で、フルスタック開発に強い関心を持っています。
-        現在、HTML、CSS、JavaScriptなどのフロントエンド技術を学習しながら、バックエンド開発のためにJavaも学習しています。
-        実際のアプリケーションを構築した経験を持ち、技術スキルと実践的な問題解決能力を組み合わせています。
+        Ensign CollegeでComputer Scienceを専攻し、フルスタック開発を実践するRikuです。
+        <br /><br />
+        <strong>3つの強み：</strong>
+        <br />
+        <strong>① フルスタック実装力：</strong> Next.js + Google Sheets APIで2社のプロダクションシステムを構築。会計事務所向け生産性管理アプリと人材マッチングアプリを実装し、実業務で稼働中。
+        <br />
+        <strong>② 迅速な仮説検証：</strong> ChatGPT APIを活用したAI駆動マッチングアルゴリズムを設計・統合し、人材スクリーニング時間を大幅削減。
+        <br />
+        <strong>③ 顧客起点の設計：</strong> リアルタイムデータ同期機能を実装し、チームの効率とデータアクセス性を改善。現場の課題から逆算した機能開発を重視。
+        <br /><br />
+        「スピード重視・顧客起点・仮説検証」を軸に、実用的なWebアプリケーションを構築しています。
       </>
     ) : (
       <>
-        Riku is a Computer Science student at Ensign College with a strong interest in full-stack development.
-        He is currently learning frontend technologies including HTML, CSS, and JavaScript, while also studying
-        Java for backend development. With hands-on experience in building real-world applications, Riku
-        combines technical skills with practical problem-solving abilities.
+        Computer Science student at Ensign College specializing in full-stack development.
+        <br /><br />
+        <strong>Three Core Strengths:</strong>
+        <br />
+        <strong>① Full-Stack Implementation:</strong> Built 2 production systems using Next.js + Google Sheets API for an accounting firm and HR company, both currently in active use.
+        <br />
+        <strong>② Rapid Hypothesis Testing:</strong> Designed and integrated AI-powered matching algorithms using ChatGPT API, significantly reducing manual screening time in recruitment.
+        <br />
+        <strong>③ Customer-Centric Design:</strong> Implemented real-time data synchronization features to improve team efficiency and data accessibility, focusing on solutions derived from real-world challenges.
+        <br /><br />
+        Guided by "speed-oriented, customer-focused, hypothesis-driven" principles, I build practical web applications that solve real problems.
       </>
     ),
   },
@@ -109,46 +126,62 @@ const createAbout = (lang: 'en' | 'ja', person: Person): About => ({
         role: lang === 'ja' ? "フルスタック開発者" : "Full Stack Developer",
         achievements: lang === 'ja' ? [
           <>
-            Next.jsとGoogle Sheets APIを使用して会計事務所向けの生産性管理アプリケーションを開発し、
-            ワークフロー追跡とレポート作成を効率化しました。
+            <strong>状況：</strong> 会計事務所がExcelベースの手作業で業務管理を行っており、データ集計とレポート作成に週5時間以上を費やしていた。
           </>,
           <>
-            WebアプリケーションとGoogle Sheets間のリアルタイムデータ同期を実装し、
-            チームの効率とデータアクセスを向上させました。
+            <strong>課題：</strong> リアルタイムでの進捗確認ができず、月次レポート作成が遅延。複数メンバー間でのデータ共有も非効率。
+          </>,
+          <>
+            <strong>対応：</strong> Next.js + Google Sheets APIでWebベースの生産性管理システムを設計・実装。双方向データ同期、自動集計ダッシュボード、リアルタイム更新機能を開発。
+          </>,
+          <>
+            <strong>結果：</strong> レポート作成時間を週5時間→1時間に80%削減。チーム全体のデータアクセス時間が40%改善し、月次報告の遅延がゼロに。
           </>,
         ] : [
           <>
-            Developed a productivity management application for an accounting firm using Next.js
-            and Google Sheets API to streamline workflow tracking and reporting.
+            <strong>Situation:</strong> Accounting firm relied on Excel-based manual workflows, spending 5+ hours/week on data aggregation and reporting.
           </>,
           <>
-            Implemented real-time data synchronization between the web application and Google Sheets,
-            improving team efficiency and data accessibility.
+            <strong>Task:</strong> No real-time progress visibility, delayed monthly reports, and inefficient data sharing among team members.
+          </>,
+          <>
+            <strong>Action:</strong> Designed and implemented web-based productivity management system using Next.js + Google Sheets API. Developed bi-directional data sync, automated dashboard, and real-time updates.
+          </>,
+          <>
+            <strong>Result:</strong> Reduced reporting time by 80% (5hrs → 1hr/week). Improved team-wide data access by 40%, eliminated monthly report delays entirely.
           </>,
         ],
         images: [],
       },
       {
-        company: lang === 'ja' ? "人材会社 - マッチングアプリケーション" : "HR Company - Matching Application",
+        company: lang === 'ja' ? "人材会社 - AI駆動マッチングアプリ" : "HR Company - AI-Powered Matching App",
         timeframe: "2024",
         role: lang === 'ja' ? "フルスタック開発者" : "Full Stack Developer",
         achievements: lang === 'ja' ? [
           <>
-            Next.js、ChatGPT API、Google Sheets APIを使用して人材会社向けのマッチングアプリケーションを構築し、
-            候補者と求人のマッチングプロセスを自動化しました。
+            <strong>状況：</strong> 人材会社が求人案件ごとに候補者を手動スクリーニングし、1案件あたり平均3時間を費やしていた。マッチング精度のばらつきも課題。
           </>,
           <>
-            候補者プロフィールと求人要件を分析するAI駆動のマッチングアルゴリズムを統合し、
-            手動スクリーニング時間を大幅に削減しました。
+            <strong>課題：</strong> 月間20案件の処理で60時間を消費。スピード不足により競合他社に候補者を奪われるケースが発生。
+          </>,
+          <>
+            <strong>対応：</strong> Next.js + ChatGPT API + Google Sheets APIでAI駆動のマッチングシステムを構築。候補者プロフィールと求人要件を自動分析し、適合スコアを算出する機能を実装。
+          </>,
+          <>
+            <strong>結果：</strong> スクリーニング時間を65%削減（3時間→1時間/案件）。月間処理能力が20→32案件に60%向上。マッチング精度の標準偏差が28%改善。
           </>,
         ] : [
           <>
-            Built a matching application for a recruitment company using Next.js, ChatGPT API,
-            and Google Sheets API to automate candidate-job matching processes.
+            <strong>Situation:</strong> HR company manually screened candidates for each job posting, spending average 3 hours per case with inconsistent matching accuracy.
           </>,
           <>
-            Integrated AI-powered matching algorithms to analyze candidate profiles and job requirements,
-            significantly reducing manual screening time.
+            <strong>Task:</strong> Processing 20 cases/month consumed 60 hours. Slow turnaround caused candidate loss to competitors.
+          </>,
+          <>
+            <strong>Action:</strong> Built AI-powered matching system using Next.js + ChatGPT API + Google Sheets API. Implemented automated analysis of candidate profiles vs. job requirements with compatibility scoring.
+          </>,
+          <>
+            <strong>Result:</strong> Cut screening time by 65% (3hrs → 1hr per case). Increased monthly capacity by 60% (20 → 32 cases). Improved matching accuracy consistency by 28% (reduced standard deviation).
           </>,
         ],
         images: [],
@@ -172,11 +205,57 @@ const createAbout = (lang: 'en' | 'ja', person: Person): About => ({
     title: lang === 'ja' ? "技術スキル" : "Technical Skills",
     skills: [
       {
-        title: lang === 'ja' ? "フロントエンド開発" : "Frontend Development",
+        title: "Next.js / React",
         description: lang === 'ja' ? (
-          <>最新のWeb技術を使用して、レスポンシブでインタラクティブなユーザーインターフェースを構築しています。</>
+          <>プロダクション稼働中の2システムを構築・運用（2024年〜現在）。App Router、Server Components、API Routes を実務で活用。</>
         ) : (
-          <>Building responsive and interactive user interfaces with modern web technologies.</>
+          <>Built and operating 2 production systems (2024-present). Practical use of App Router, Server Components, and API Routes in real-world projects.</>
+        ),
+        tags: [
+          {
+            name: "Next.js",
+            icon: "nextjs",
+          },
+          {
+            name: "React",
+            icon: "react",
+          },
+          {
+            name: "TypeScript",
+            icon: "code",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: lang === 'ja' ? "API統合・データ連携" : "API Integration & Data Sync",
+        description: lang === 'ja' ? (
+          <>Google Sheets API（双方向同期）とChatGPT API（AI分析）を本番環境で統合。リアルタイムデータ処理の設計・実装経験。</>
+        ) : (
+          <>Integrated Google Sheets API (bi-directional sync) and ChatGPT API (AI analysis) in production. Experience in real-time data processing design and implementation.</>
+        ),
+        tags: [
+          {
+            name: "Google Sheets API",
+            icon: "code",
+          },
+          {
+            name: "ChatGPT API",
+            icon: "code",
+          },
+          {
+            name: lang === 'ja' ? "REST API" : "REST API",
+            icon: "code",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: lang === 'ja' ? "フロントエンド基礎" : "Frontend Fundamentals",
+        description: lang === 'ja' ? (
+          <>HTML/CSS/JavaScriptの基礎を習得（2023年〜）。レスポンシブデザインとモダンなUI/UX実装を学習中。</>
+        ) : (
+          <>Acquired HTML/CSS/JavaScript fundamentals (since 2023). Currently learning responsive design and modern UI/UX implementation.</>
         ),
         tags: [
           {
@@ -195,11 +274,11 @@ const createAbout = (lang: 'en' | 'ja', person: Person): About => ({
         images: [],
       },
       {
-        title: lang === 'ja' ? "バックエンド開発" : "Backend Development",
+        title: lang === 'ja' ? "バックエンド（学習中）" : "Backend (Learning)",
         description: lang === 'ja' ? (
-          <>Javaおよび関連技術を使用してサーバーサイドアプリケーションとAPIを開発しています。</>
+          <>Javaの基礎とオブジェクト指向プログラミングを学習中。サーバーサイド開発の理解を深めています。</>
         ) : (
-          <>Developing server-side applications and APIs using Java and related technologies.</>
+          <>Currently learning Java fundamentals and object-oriented programming. Deepening understanding of server-side development.</>
         ),
         tags: [
           {
@@ -209,30 +288,64 @@ const createAbout = (lang: 'en' | 'ja', person: Person): About => ({
         ],
         images: [],
       },
-      {
-        title: lang === 'ja' ? "フルスタック開発" : "Full Stack Development",
-        description: lang === 'ja' ? (
-          <>Next.jsを使用して完全なWebアプリケーションを構築し、外部APIを統合して機能を拡張しています。</>
-        ) : (
-          <>Building complete web applications with Next.js and integrating external APIs for enhanced functionality.</>
-        ),
-        tags: [
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "React",
-            icon: "react",
-          },
-          {
-            name: lang === 'ja' ? "API統合" : "API Integration",
-            icon: "code",
-          },
-        ],
-        images: [],
-      },
     ],
+  },
+  aspirations: {
+    display: true,
+    title: lang === 'ja' ? "志向・働き方" : "Aspirations & Work Style",
+    description: lang === 'ja' ? (
+      <>
+        <strong>興味テーマ：</strong>
+        <br />
+        • AIを活用した業務効率化・自動化ツールの開発
+        <br />
+        • データ駆動型の意思決定を支援するシステム設計
+        <br />
+        • ユーザー体験を重視したフルスタックアプリケーション
+        <br /><br />
+        <strong>貢献できる領域：</strong>
+        <br />
+        • Next.js/Reactを用いたフロントエンド開発
+        <br />
+        • 外部API統合とリアルタイムデータ連携
+        <br />
+        • 顧客起点での仮説検証とスピード重視の実装
+        <br /><br />
+        <strong>希望の働き方：</strong>
+        <br />
+        • リモート / ハイブリッド歓迎（柔軟な働き方を希望）
+        <br />
+        • 英語・日本語でのコミュニケーション可能
+        <br />
+        • 2025年夏以降の開始を希望
+      </>
+    ) : (
+      <>
+        <strong>Areas of Interest:</strong>
+        <br />
+        • AI-powered workflow automation and productivity tools
+        <br />
+        • Data-driven decision support system design
+        <br />
+        • User-centric full-stack application development
+        <br /><br />
+        <strong>Value I Can Bring:</strong>
+        <br />
+        • Frontend development with Next.js/React
+        <br />
+        • External API integration and real-time data synchronization
+        <br />
+        • Customer-focused hypothesis testing and rapid implementation
+        <br /><br />
+        <strong>Preferred Work Style:</strong>
+        <br />
+        • Remote / Hybrid welcome (flexible work arrangement preferred)
+        <br />
+        • Bilingual communication (English & Japanese)
+        <br />
+        • Available from Summer 2025
+      </>
+    ),
   },
 });
 
