@@ -113,7 +113,7 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="star"
+                      prefixIcon="rocket"
                       href="/strengths"
                       label="Strengths"
                       selected={pathname === "/strengths"}
@@ -121,7 +121,7 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="star"
+                      prefixIcon="rocket"
                       href="/strengths"
                       selected={pathname === "/strengths"}
                     />
@@ -151,7 +151,7 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="code"
+                      prefixIcon="document"
                       href="/skills"
                       label="Skills"
                       selected={pathname === "/skills"}
@@ -159,7 +159,7 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="code"
+                      prefixIcon="document"
                       href="/skills"
                       selected={pathname === "/skills"}
                     />
@@ -170,7 +170,7 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="lightbulb"
+                      prefixIcon="globe"
                       href="/aspirations"
                       label="Aspirations"
                       selected={pathname === "/aspirations"}
@@ -178,7 +178,7 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="lightbulb"
+                      prefixIcon="globe"
                       href="/aspirations"
                       selected={pathname === "/aspirations"}
                     />
