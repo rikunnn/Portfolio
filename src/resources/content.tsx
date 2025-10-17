@@ -14,7 +14,7 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: false,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: <>Updates about my projects and learning journey</>,
 };
 
@@ -47,10 +47,12 @@ const home: Home = {
   headline: <>Building full-stack applications with modern technologies</>,
   featured: {
     display: false,
+    title: "",
+    href: "",
   },
   subline: (
     <>
-      I'm Riku, a Computer Science student at Ensign College with a passion for full-stack development.
+      I&apos;m Riku, a Computer Science student at Ensign College with a passion for full-stack development.
       <br /> I build practical applications using Next.js, Java, and modern web technologies.
     </>
   ),

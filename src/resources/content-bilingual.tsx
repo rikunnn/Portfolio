@@ -14,7 +14,7 @@ const createPerson = (lang: 'en' | 'ja'): Person => ({
 
 const createNewsletter = (lang: 'en' | 'ja', person: Person): Newsletter => ({
   display: false,
-  title: lang === 'ja' ? <>{person.firstName}のニュースレターを購読</> : <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: lang === 'ja' ? <>{person.firstName}のニュースレターを購読</> : <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: lang === 'ja' ? <>プロジェクトと学習の旅についての更新</> : <>Updates about my projects and learning journey</>,
 });
 
@@ -59,7 +59,7 @@ const createHome = (lang: 'en' | 'ja', person: Person): Home => ({
     </>
   ) : (
     <>
-      I'm Riku, a Computer Science student at Ensign College with a passion for full-stack development.
+      I&apos;m Riku, a Computer Science student at Ensign College with a passion for full-stack development.
       <br /> I build practical applications using Next.js, Java, and modern web technologies.
     </>
   ),
@@ -112,7 +112,7 @@ const createAbout = (lang: 'en' | 'ja', person: Person): About => ({
         <br />
         <strong>③ Customer-Centric Design:</strong> Implemented real-time data synchronization features to improve team efficiency and data accessibility, focusing on solutions derived from real-world challenges.
         <br /><br />
-        Guided by "speed-oriented, customer-focused, hypothesis-driven" principles, I build practical web applications that solve real problems.
+        Guided by &quot;speed-oriented, customer-focused, hypothesis-driven&quot; principles, I build practical web applications that solve real problems.
       </>
     ),
   },

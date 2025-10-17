@@ -1,11 +1,13 @@
 import { ImageResponse } from "next/og";
-import { baseURL, person } from "@/resources";
+import { baseURL } from "@/resources";
+import { getContent } from "@/resources/content-bilingual";
 
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
   let url = new URL(request.url);
   let title = url.searchParams.get("title") || "Portfolio";
+  const { person } = getContent('en');
 
   async function loadGoogleFont(font: string) {
     const url = `https://fonts.googleapis.com/css2?family=${font}`;
@@ -63,6 +65,7 @@ export async function GET(request: Request) {
           }}
         >
           <img
+            alt={person.name}
             src={baseURL + person.avatar}
             style={{
               width: "12rem",
